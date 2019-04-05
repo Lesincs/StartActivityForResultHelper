@@ -4,10 +4,24 @@
 
 ### 引入
 
-gradle 依赖 ：
+项目级别的``build.gradle``文件加入：
+
+```
+allprojects {
+    repositories {
+        ...
+        maven { url 'https://dl.bintray.com/lesincs/maven' }
+    }
+}
+```
+
+模组级别``build.gradle`` 文件添加 依赖 ：
 
 ``` 
-implementation com.github.lesincs:StartActivityForResultHelper:1.0.0
+dependencies {
+    ...
+    implementation com.github.lesincs:StartActivityForResultHelper:1.0.0
+}
 ```
 
 ### 使用
